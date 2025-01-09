@@ -1,6 +1,7 @@
-
 from typing import Dict, Any
+
 import openpyxl
+
 
 def save_to_excel(parsed_data: Dict[str, Any], filename: str = "registry_data.xlsx") -> None:
     workbook = openpyxl.Workbook()

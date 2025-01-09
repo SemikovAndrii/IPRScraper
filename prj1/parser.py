@@ -1,6 +1,6 @@
-
-from typing import Dict, List, Any
 import re
+from typing import Dict, List, Any
+
 
 def parse_entry(entry: str) -> Dict[str, Any]:
     parsed_data: Dict[str, Any] = {}
@@ -41,6 +41,7 @@ def parse_entry(entry: str) -> Dict[str, Any]:
     parsed_data["Persons"] = persons
 
     return parsed_data
+
 
 def parse_all(raw_data: Dict[str, str]) -> Dict[str, Any]:
     return {key: parse_entry(value) for key, value in raw_data.items()}
